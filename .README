@@ -1,0 +1,124 @@
+# API Documentation
+
+This documentation provides details about the available routes and their corresponding functionalities for the API.
+
+## Users
+
+### Register User
+
+Registers a new user.
+
+- Method: POST
+- Endpoint: `/api/register`
+- Authentication: No
+- Status Code: 201
+
+### Login User
+
+Logs in an existing user.
+
+- Method: POST
+- Endpoint: `/api/login`
+- Authentication: No
+- Status Code: 201
+
+### Get All Users
+
+Retrieves all users.
+
+- Method: GET
+- Endpoint: `/api/users`
+- Authentication: No
+- Status Code: 200
+
+### Get Friends of a User
+
+Retrieves all friends of a particular user identified by their ID.
+
+- Method: GET
+- Endpoint: `/api/users/:id/friends`
+- Authentication: No
+- Status Code: 200
+
+### Send Friend Request
+
+Sends a friend request to another user identified by their ID.
+
+- Method: POST
+- Endpoint: `/api/users/:id/friends`
+- Authentication: Yes
+- Status Code: 201
+
+### Accept/Reject Friend Request
+
+Accepts or rejects a friend request.
+
+- Method: PATCH
+- Endpoint: `/api/users/:id/friends/:friendId`
+- Authentication: Yes
+- Status Code: 204
+
+## Posts
+
+### Create a Post
+
+Creates a new post.
+
+- Method: POST
+- Endpoint: `/api/posts`
+- Authentication: Yes
+- Status Code: 201
+
+### Get All Posts
+
+Retrieves all posts.
+
+- Method: GET
+- Endpoint: `/api/posts`
+- Authentication: No
+- Status Code: 200
+
+### Get Post by ID
+
+Retrieves a specific post by its ID.
+
+- Method: GET
+- Endpoint: `/api/posts/:id`
+- Authentication: No
+- Status Code: 200
+
+### Update Post by ID
+
+Updates a specific post by its ID.
+
+- Method: PATCH
+- Endpoint: `/api/posts/:id`
+- Authentication: Yes
+- Status Code: 204
+
+### Delete Post by ID
+
+Deletes a specific post by its ID.
+
+- Method: DELETE
+- Endpoint: `/api/posts/:id`
+- Authentication: Yes
+- Status Code: 202
+
+### Like a Post
+
+Likes a specific post.
+
+- Method: POST
+- Endpoint: `/api/posts/:id/likes`
+- Authentication: Yes
+- Status Code: 201
+
+### Comment on a Post
+
+Adds a comment to a specific post.
+
+- Method: POST
+- Endpoint: `/api/posts/:id/comments`
+- Authentication: Yes
+- Status Code: 201
