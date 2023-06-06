@@ -16,8 +16,8 @@ const userSchema = new mongoose.Schema({
   friendRequests: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
 });
 
-userSchema.pre("save", async function (next) {
-  this.password = await bcrypt.hash(this.password, 5);
+userSchema.pre("save",  function (next) {
+  this.password =  bcrypt.hashSync(this.password, 5);
   next();
 });
 

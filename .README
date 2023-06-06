@@ -110,7 +110,7 @@ Deletes a specific post by its ID.
 Likes a specific post.
 
 - Method: POST
-- Endpoint: `/api/posts/:id/likes`
+- Endpoint: `/api/posts/:id/like`
 - Authentication: Yes
 - Status Code: 201
 
@@ -122,3 +122,5 @@ Adds a comment to a specific post.
 - Endpoint: `/api/posts/:id/comments`
 - Authentication: Yes
 - Status Code: 201
+
+### Get Comments on a Post
